@@ -45,8 +45,25 @@ def flower(t,n,r,m):
         t.lt(ang)
 
 
-flower(bob,n=20,r=1000,m=10)
+#flower(bob,n=20,r=1000,m=10)
 
 
 # to make the flower blades overlap, increase n value to increase the curvature of each arc
 # decrease r value accordingly to avoid making the flower too big
+
+
+def pies(t,n,r):
+# n is the number of slices of the pie
+# r is the length of the inner radius
+    for i in range(n):
+        pieceofpie(t,n,r)
+        t.lt(180)
+
+def pieceofpie(t,n,r):
+    t.fd(r)
+    t.lt((180-360/n)/2)
+    t.fd(2*math.cos((180-360/n)/2)*r)
+    t.lt((180-360/n)/2)
+    t.fd(r)
+
+pies(bob,5,100)
