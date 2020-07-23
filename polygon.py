@@ -66,4 +66,14 @@ def pieceofpie(t,n,r):
     t.lt((180-360/n)/2)
     t.fd(r)
 
-pies(bob,5,100)
+#pies(bob,5,100)
+
+
+
+def spiral(t,r):
+    # r is the total time step
+    for i in range(r):
+        t.fd(i)
+        t.lt(20)
+
+spiral(bob,100)
